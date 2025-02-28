@@ -1,3 +1,50 @@
+# General
+.DS_Store
+Thumbs.db
+
+# C++ Build Files
+*.o
+*.obj
+*.so
+*.a
+*.lo
+*.lai
+*.pdb
+*.lib
+*.dll
+*.exe
+*.out
+*.app
+
+# CMake files
+CMakeFiles/
+CMakeCache.txt
+Makefile
+cmake_install.cmake
+*.cmake
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Dependency directories
+node_modules/
+vendor/
+
+# Logs
+*.log
+debug.log
+
+# Crypto keys and secrets
+*.pem
+*.key
+wallet.dat
+
+# OS-specific
+*.bak
+*.swp
 # Prerequisites
 *.d
 
