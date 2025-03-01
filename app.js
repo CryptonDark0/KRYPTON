@@ -1,19 +1,17 @@
-const express = require('express');
-const cors = require('cors');
-const mongoose = require('mongoose');
-const routes = require('./routes');
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Wallet from './pages/Wallet';
 
-const app = express();
-app.use(cors());
-app.use(express.json());
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/wallet" element={<Wallet />} />
+      </Routes>
+    </Router>
+  );
+}
 
-// Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('MongoDB connected'))
-  .catch(err => console.log(err));
-
-// Routes
-app.use('/api', routes);
-
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+export default App;
