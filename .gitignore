@@ -77,3 +77,13 @@ wallet.dat
 *.exe
 *.out
 *.app
+
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.cache
+*.log
+*.nupkg
+packages/
